@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "site-file-grabber"
+version = "0.1.0"
+description = "Interactive shell for finding and downloading site files from live pages, Google results, and Wayback Machine indexes."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Site File Grabber" }]
+license = { text = "MIT" }
+dependencies = ["selenium>=4.20"]
+
+[project.scripts]
+site-file-grabber = "site_file_grabber.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
